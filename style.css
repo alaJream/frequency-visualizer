@@ -1,0 +1,70 @@
+body {
+	background: #000;
+	color: #fff;
+}
+
+#wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: 0;
+}
+
+.controls {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 20;
+}
+
+.controls span {
+	color: #fff;
+	cursor: pointer;
+}
+
+.startstop::before {
+	content: "\f04b";
+	color: #fff;
+	font-family: FontAwesome;
+}
+
+.startstop.pause::before {
+	content: "\f04c" !important;
+	font-family: FontAwesome;
+}
+
+
+#audio {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: 10;
+}
+
+.svg-containter {
+    position: absolute;
+    top: 0;
+	left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.svg-img {
+	position: absolute;
+	min-width: 100%;
+    min-height: 100%;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
