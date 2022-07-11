@@ -6,6 +6,18 @@ $(document).ready(function() {
 	  var audioSrc = audioCtx.createMediaElementSource(audioElement);
 	  var analyser = audioCtx.createAnalyser();
 	 
+	  
+	 // fix stupid safari suspension
+	  function fixSuspendedState(){
+		  if(audioCtx.state == 'suspended'){
+		    console.log('suspended. try to wake it')
+		    audioCtx.resume();
+		    return false;
+		  }else{
+		    console.log('not suspended, nothing to do.')
+		    return true;
+		  }
+	    }
 
 	  // Bind our analyser to the media element source.
 	  audioSrc.connect(analyser);
